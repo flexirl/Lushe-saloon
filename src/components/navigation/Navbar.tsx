@@ -95,7 +95,7 @@ export default function Navbar() {
                 ? 'border-espresso/30'
                 : 'border-ivory/50'
             }`}
-            aria-label="LUSHÈ home"
+            aria-label="LUSHÈ Unisex Saloon home"
           >
             Lushè
           </a>

@@ -46,7 +46,7 @@ export default function HeroScene() {
       >
         <Image
           src="/assets/lushe/hero/hero-salon-wide.jpg"
-          alt="Lushè Beauty Studio — panoramic salon interior"
+          alt="Lushè Unisex Saloon — panoramic salon interior"
           fill
           priority
           quality={85}

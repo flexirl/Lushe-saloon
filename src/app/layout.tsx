@@ -17,20 +17,23 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lushè Beauty Studio | Premium Beauty Salon in Gurugram",
+  title: "Lushè Unisex Saloon | Premium Unisex Salon in Gurugram",
   description:
-    "Lushè Beauty Studio — A premium nails & beauty studio in Sector 52, Gurugram. Expert hair, nails, skin, and beauty services in a warm, sophisticated setting.",
+    "Lushè Unisex Saloon — A premium unisex salon in Sector 52, Gurugram. Expert hair, nails, skin, and beauty services for men & women in a warm, sophisticated setting.",
   keywords: [
-    "beauty salon gurugram",
+    "unisex salon gurugram",
     "premium salon sector 52",
     "nails studio gurugram",
-    "lushè beauty",
+    "lushè unisex saloon",
+    "lusheunisexsaloon",
     "hair salon gurugram",
-    "beauty studio india",
+    "beauty salon india",
+    "mens salon gurugram",
+    "womens salon gurugram",
   ],
   openGraph: {
-    title: "Lushè Beauty Studio",
-    description: "Premium Nails & Beauty Studio — Sector 52, Gurugram",
+    title: "Lushè Unisex Saloon",
+    description: "Premium Unisex Salon — Sector 52, Gurugram",
     type: "website",
   },
 };

@@ -88,7 +88,7 @@ export default function Hero() {
       ref={heroRef}
       id="top"
       className="relative h-svh min-h-[760px] overflow-hidden bg-charcoal text-ivory"
-      aria-label="Lushè Beauty Studio hero"
+      aria-label="Lushè Unisex Saloon hero"
     >
       <div className="relative h-full w-full overflow-hidden">
         {/* Real salon interior photograph with responsive crops for Mobile, Tablet, and Desktop */}
@@ -101,7 +101,7 @@ export default function Hero() {
           <div className="relative size-full block md:hidden">
             <Image
               src="/assets/lushe/hero/hero-mobile.png"
-              alt="Warm illuminated interior of Lushè Beauty Studio with backlit arched mirrors, wood slat walls, and styling stations"
+              alt="Warm illuminated interior of Lushè Unisex Saloon with backlit arched mirrors, wood slat walls, and styling stations"
               fill
               priority
               quality={90}
@@ -114,7 +114,7 @@ export default function Hero() {
           <div className="relative size-full hidden md:block lg:hidden">
             <Image
               src="/assets/lushe/hero/hero-tablet.png"
-              alt="Warm illuminated interior of Lushè Beauty Studio with backlit arched mirrors, wood slat walls, and styling stations"
+              alt="Warm illuminated interior of Lushè Unisex Saloon with backlit arched mirrors, wood slat walls, and styling stations"
               fill
               priority
               quality={90}
@@ -127,7 +127,7 @@ export default function Hero() {
           <div className="relative size-full hidden lg:block">
             <Image
               src="/assets/lushe/hero/hero-desktop.png"
-              alt="Warm illuminated interior of Lushè Beauty Studio with backlit arched mirrors, wood slat walls, and styling stations"
+              alt="Warm illuminated interior of Lushè Unisex Saloon with backlit arched mirrors, wood slat walls, and styling stations"
               fill
               priority
               quality={95}
@@ -151,13 +151,19 @@ export default function Hero() {
             data-hero-meta
             className="mb-3 md:mb-5 text-xs font-medium uppercase tracking-[0.2em] text-ivory/90 drop-shadow-sm"
           >
-            Nails · Beauty · Gurugram
+            Unisex Salon · Sector 52 · Gurugram
           </p>
 
-          {/* Huge luxury serif display headline */}
+          {/* Huge luxury serif display headline with brand lockup */}
           <h1 className="overflow-hidden font-display text-[clamp(4.5rem,14vw,12rem)] font-light uppercase leading-[0.72] tracking-normal !text-white text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]">
             <span data-hero-line className="block !text-white text-white" style={{ color: '#ffffff' }}>
               Lushè
+            </span>
+            <span
+              data-hero-line
+              className="mt-2 md:mt-3 block font-sans text-[clamp(0.85rem,2.8vw,2rem)] font-medium uppercase tracking-[0.35em] text-white/75 drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
+            >
+              Unisex Saloon
             </span>
           </h1>
 

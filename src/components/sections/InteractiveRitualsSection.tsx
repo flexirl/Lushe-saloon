@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Sparkles, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { useBooking } from '@/components/booking/BookingContext';
 
 interface ServiceHotspot {
   id: string;
@@ -99,6 +100,7 @@ const SERVICE_HOTSPOTS: ServiceHotspot[] = [
 ];
 
 export default function InteractiveRitualsSection() {
+  const { openBooking } = useBooking();
   const [activeIndex, setActiveIndex] = useState(0);
   const active = SERVICE_HOTSPOTS[activeIndex];
 
@@ -115,10 +117,10 @@ export default function InteractiveRitualsSection() {
       >
         <div className="whitespace-nowrap flex animate-marquee" style={{ animationDuration: '60s' }}>
           <span className="font-display text-[15vw] font-light uppercase tracking-[0.2em] leading-none text-charcoal">
-            LUSHÈ · BEAUTY STUDIO · SALON SERVICES ·&nbsp;
+            LUSHÈ · UNISEX SALOON · SALON SERVICES ·&nbsp;
           </span>
           <span className="font-display text-[15vw] font-light uppercase tracking-[0.2em] leading-none text-charcoal">
-            LUSHÈ · BEAUTY STUDIO · SALON SERVICES ·&nbsp;
+            LUSHÈ · UNISEX SALOON · SALON SERVICES ·&nbsp;
           </span>
         </div>
       </div>
@@ -141,7 +143,7 @@ export default function InteractiveRitualsSection() {
           <div className="relative w-full max-w-[460px] lg:max-w-[500px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-beige/50 bg-cream">
             <Image
               src="/assets/lushe/rituals/salon-model-portrait.jpg"
-              alt="Model in Lushè salon with styled hair, glowing skin, and beautiful nail art"
+              alt="Model in Lushè Unisex Saloon with styled hair, glowing skin, and beautiful nail art"
               fill
               sizes="(max-width: 768px) 90vw, 500px"
               className="size-full object-cover object-center transition-transform duration-1000 ease-out hover:scale-105"
@@ -227,15 +229,14 @@ export default function InteractiveRitualsSection() {
                 </a>
 
                 {/* CTA 2: Book on WhatsApp */}
-                <a
-                  href={`https://wa.me/918796783680?text=${encodeURIComponent(active.whatsappMessage)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#8B7355] text-ivory text-xs font-semibold uppercase tracking-[0.14em] hover:bg-espresso transition-all duration-300 shadow-md"
+                <button
+                  type="button"
+                  onClick={() => openBooking({ service: active.title })}
+                  className="group flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#8B7355] text-ivory text-xs font-semibold uppercase tracking-[0.14em] hover:bg-espresso transition-all duration-300 shadow-md cursor-pointer"
                 >
                   <MessageCircle size={14} />
                   <span>Book on WhatsApp</span>
-                </a>
+                </button>
               </div>
 
               {/* Quick switcher dots */}

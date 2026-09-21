@@ -32,7 +32,7 @@ const FAQS: FAQItem[] = [
     id: 'location',
     question: 'Where in Gurugram is the studio located, and is parking available?',
     answer:
-      'Lushè Beauty Studio is located in Sector 52, Gurugram, easily accessible from Golf Course Road, Ardee City, and South City. We provide dedicated on-site parking and valet assistance for all our visitors.',
+      'Lushè Unisex Saloon is located in Sector 52, Gurugram, easily accessible from Golf Course Road, Ardee City, and South City. We provide dedicated on-site parking and valet assistance for all our visitors.',
   },
   {
     id: 'hygiene',

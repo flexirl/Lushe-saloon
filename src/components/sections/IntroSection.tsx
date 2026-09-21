@@ -129,7 +129,7 @@ export default function IntroSection() {
           <div data-parallax className="relative size-full">
             <Image
               src="/assets/lushe/interior/about.png"
-              alt="About Lushè Beauty Studio"
+              alt="About Lushè Unisex Saloon"
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
               className="size-full object-cover"

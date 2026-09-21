@@ -14,10 +14,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col gap-4 border-t border-ivory/20 pt-6 text-xs uppercase tracking-[0.14em] text-ivory/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 LUSHÈ Beauty Studio. All rights reserved.</p>
+          <p>© 2026 LUSHÈ Unisex Saloon. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a
-              href="https://instagram.com/lushe_beauty"
+              href="https://www.instagram.com/lushebeauty.studio/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blush transition-colors"

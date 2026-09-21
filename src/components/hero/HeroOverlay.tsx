@@ -65,6 +65,11 @@ export default function HeroOverlay() {
         }}
       >
         Lushè
+        <span
+          className="mt-2 block font-sans text-[clamp(0.75rem,2.5vw,1.6rem)] font-medium uppercase tracking-[0.35em] text-white/70"
+        >
+          Unisex Saloon
+        </span>
       </h1>
 
       <p

@@ -2,15 +2,17 @@
 
 import { useEffect } from 'react';
 import { initLenis, destroyLenis } from '@/lib/smoothScroll';
+import { BookingProvider } from '@/components/booking/BookingContext';
+import BookingModal from '@/components/booking/BookingModal';
 import Navbar from '@/components/navigation/Navbar';
 import Hero from '@/components/hero/Hero';
 import IntroSection from '@/components/sections/IntroSection';
 import InteractiveRitualsSection from '@/components/sections/InteractiveRitualsSection';
-import ServicesSection from '@/components/sections/ServicesSection';
+import ServicesSection from '@/components/services/ServicesSection';
 import MembershipSection from '@/components/sections/MembershipSection';
 import ExpandingCTASection from '@/components/sections/ExpandingCTASection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import GallerySection from '@/components/sections/GallerySection';
+import GallerySection from '@/components/gallery/GallerySection';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/footer/Footer';
@@ -27,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <BookingProvider>
       <Navbar />
       <main>
         <Hero />
@@ -35,14 +37,15 @@ export default function Home() {
         <InteractiveRitualsSection />
         <ServicesSection />
         <MembershipSection />
+        <GallerySection />
         <ExpandingCTASection />
         <TestimonialsSection />
-        <GallerySection />
         <FAQSection />
         <ContactSection />
       </main>
       <Footer />
       <MascotCompanion />
-    </>
+      <BookingModal />
+    </BookingProvider>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Check, Crown, Star, Gem, ArrowUpRight } from 'lucide-react';
+import { useBooking } from '@/components/booking/BookingContext';
 
 interface MembershipTier {
   id: string;
@@ -72,6 +73,7 @@ const TIERS: MembershipTier[] = [
 ];
 
 export default function MembershipSection() {
+  const { openBooking } = useBooking();
   const [activeTier, setActiveTier] = useState<string>('gold');
 
   return (
@@ -182,13 +184,15 @@ export default function MembershipSection() {
                 </ul>
 
                 {/* CTA */}
-                <a
-                  href={`https://wa.me/918796783680?text=${encodeURIComponent(
-                    `Hi Lushè, I'm interested in the ${tier.name} Membership (${tier.price}).`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.14em] transition-all ${
+                <button
+                  type="button"
+                  onClick={() =>
+                    openBooking({
+                      category: 'memberships',
+                      service: `${tier.name} Tier Membership`,
+                    })
+                  }
+                  className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-[0.14em] transition-all cursor-pointer ${
                     tier.highlight
                       ? 'bg-champagne text-espresso hover:bg-champagne/90 shadow-md'
                       : 'bg-espresso text-ivory hover:bg-charcoal'
@@ -196,7 +200,7 @@ export default function MembershipSection() {
                 >
                   <span>Join {tier.name}</span>
                   <ArrowUpRight size={14} />
-                </a>
+                </button>
               </div>
             );
           })}

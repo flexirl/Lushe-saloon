@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { ArrowUpRight, Phone, MapPin, Clock } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useBooking } from '@/components/booking/BookingContext';
 
 function InstagramIcon({ size = 17 }: { size?: number }) {
   return (
@@ -26,6 +27,7 @@ function InstagramIcon({ size = 17 }: { size?: number }) {
 }
 
 export default function ContactSection() {
+  const { openBooking } = useBooking();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -130,18 +132,17 @@ export default function ContactSection() {
 
           {/* Action buttons matching Lovable pill style */}
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a
-              href="https://wa.me/918796783680?text=Hi%20Lushè,%20I'd%20like%20to%20book%20an%20appointment"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-espresso px-6 py-3 text-xs font-semibold uppercase tracking-wider text-espresso transition-all hover:bg-espresso hover:text-ivory"
+            <button
+              type="button"
+              onClick={() => openBooking()}
+              className="inline-flex items-center gap-2 rounded-full border border-espresso px-6 py-3 text-xs font-semibold uppercase tracking-wider text-espresso transition-all hover:bg-espresso hover:text-ivory cursor-pointer"
             >
               <span>Book on WhatsApp</span>
               <ArrowUpRight size={14} />
-            </a>
+            </button>
 
             <a
-              href="https://instagram.com/lushe_beauty"
+              href="https://www.instagram.com/lushebeauty.studio/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Lushè Instagram"

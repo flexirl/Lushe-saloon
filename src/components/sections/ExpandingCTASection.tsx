@@ -5,8 +5,10 @@ import Image from 'next/image';
 import { MessageCircle, Phone, ArrowUpRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useBooking } from '@/components/booking/BookingContext';
 
 export default function ExpandingCTASection() {
+  const { openBooking } = useBooking();
   const containerRef = useRef<HTMLDivElement>(null);
   const mediaRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -84,7 +86,7 @@ export default function ExpandingCTASection() {
         >
           <Image
             src="/assets/lushe/interior/cta-desktop.png"
-            alt="Lushè Beauty Studio warm illuminated interior"
+            alt="Lushè Unisex Saloon warm illuminated interior"
             fill
             sizes="100vw"
             className="hidden md:block size-full object-cover object-center brightness-[0.75]"
@@ -92,7 +94,7 @@ export default function ExpandingCTASection() {
           />
           <Image
             src="/assets/lushe/interior/cta-phone.png"
-            alt="Lushè Beauty Studio warm illuminated interior"
+            alt="Lushè Unisex Saloon warm illuminated interior"
             fill
             sizes="100vw"
             className="block md:hidden size-full object-cover object-center brightness-[0.75]"
@@ -130,15 +132,14 @@ export default function ExpandingCTASection() {
 
             {/* CTAs */}
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://wa.me/918796783680?text=Hi%20Lushè,%20I'd%20like%20to%20reserve%20an%20appointment"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-champagne text-espresso text-xs font-semibold uppercase tracking-[0.16em] hover:bg-champagne/90 hover:scale-[1.02] transition-all shadow-lg"
+              <button
+                type="button"
+                onClick={() => openBooking()}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-champagne text-espresso text-xs font-semibold uppercase tracking-[0.16em] hover:bg-champagne/90 hover:scale-[1.02] transition-all shadow-lg cursor-pointer"
               >
                 <MessageCircle size={17} />
                 <span>Reserve on WhatsApp</span>
-              </a>
+              </button>
 
               <a
                 href="tel:+918796783680"

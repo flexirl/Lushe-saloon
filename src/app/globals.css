@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════
-   LUSHÈ BEAUTY STUDIO — Design System Foundation
+   LUSHÈ UNISEX SALOON — Design System Foundation
    Palette derived from actual salon interior photographs
    ═══════════════════════════════════════════════════════════════ */
 
@@ -98,6 +98,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: auto; /* Lenis handles smooth scroll */
+    overflow-x: hidden;
   }
 
   body {
@@ -565,4 +566,24 @@
   .mascot-bubble {
     transition-duration: 0.01ms;
   }
+}
+
+/* ── Gallery Utilities ── */
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
