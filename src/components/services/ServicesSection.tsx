@@ -29,6 +29,7 @@ type GroupId = 'nails' | 'womens' | 'mens';
 interface ServiceGroupData {
   groupId: GroupId;
   title: string;
+  emoji: string;
   menuImage: string;
   menuImageAlt: string;
   categories: ServiceCategory[];
@@ -38,6 +39,7 @@ const SERVICE_GROUPS: ServiceGroupData[] = [
   {
     groupId: 'nails',
     title: 'Nails',
+    emoji: '💅',
     menuImage: '/assets/lushe/services/nail-menu.jpg',
     menuImageAlt: 'Lushè Unisex Saloon — Nail Services & Nail Art rate card',
     categories: [
@@ -74,6 +76,7 @@ const SERVICE_GROUPS: ServiceGroupData[] = [
   {
     groupId: 'womens',
     title: "Women's Services",
+    emoji: '✨',
     menuImage: '/assets/lushe/services/womens-menu.jpg',
     menuImageAlt: "Lushè Unisex Saloon — Women's Hair Services rate card",
     categories: [
@@ -141,6 +144,7 @@ const SERVICE_GROUPS: ServiceGroupData[] = [
   {
     groupId: 'mens',
     title: "Men's Grooming",
+    emoji: '💈',
     menuImage: '/assets/lushe/services/mens-menu.jpg',
     menuImageAlt: "Lushè Unisex Saloon — Men's Grooming Services rate card",
     categories: [
@@ -217,7 +221,6 @@ export default function ServicesSection() {
                 key={group.groupId}
                 groupId={group.groupId}
                 title={group.title}
-                emoji={group.emoji}
                 categories={group.categories}
                 isUnlocked={unlockedGroups.has(group.groupId)}
                 onPlayGame={() => setActiveGame(group.groupId)}
